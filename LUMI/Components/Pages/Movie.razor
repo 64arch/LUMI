@@ -1,0 +1,88 @@
+@page "/movie/id={MovieID:int}"
+@using LUMI.DataAccess.Movies
+
+@*<header class="top-bar">
+    <div class="search-bar">
+    </div>
+    <div class="user-actions">
+    </div>
+</header>*@
+
+<div class="movie-details">
+    <div class="movie-hero" style="background-image: url('@_movieDetails.LargePoster')">
+        <div class="movie-hero-content">
+            <div class="movie-poster" style="background-image: url('@_movieDetails.Poster')"></div>
+            <div class="movie-info">
+                <div class="movie-tags">
+                    @if (_movieDetails.Tags?.Count != 0 && _movieDetails.Tags != null) {
+                        @foreach (var tag in _movieDetails.Tags) {
+                            <span class="tag">@tag</span>
+                        }
+                    }
+                </div>
+                <h1>@_movieDetails.Title</h1>
+                <div class="movie-meta">
+                    <span>
+                        @_movieDetails.ReleaseDate.ToShortDateString().Replace(".", "/")
+                    </span>
+                    <span>•</span>
+                    <span>@_movieDetails.Duration</span>
+                </div>
+                <div class="movie-rating">
+                    <div class="rating-circle">
+                        <span>@_movieDetails.Rating.ToString().Replace(",", ".")</span>
+                    </div>
+                    <span>Рейтинг</span>
+                </div>
+                <p class="movie-overview">
+                    @_movieDetails.Description
+                </p>
+                <div class="movie-actions">
+                    <button class="btn btn-primary" onclick="window.open('@_movieDetails.DownloadLink', '_blank').focus();">
+                        <i class="icon-download"></i>Скачать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movie-content">
+        <div class="cast-section">
+            <h2>Изображения</h2>
+            <div class="media-row">
+                @if (_movieDetails.Media?.Count != 0 && _movieDetails.Media != null) {
+                    @foreach (var media in _movieDetails.Media) {
+                        <img src="@media" draggable="false"/>
+                    }   
+                }
+            </div>
+        </div>
+        @*<div class="cast-section">
+            <h2>Movie cast</h2>
+            <div class="cast-grid">
+                <div class="cast-card">
+                    <div class="cast-photo" style="background-image: url('https://media.themoviedb.org/t/p/w138_and_h175_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg')"></div>
+                    <h3>Leonardo DiCaprio</h3>
+                    <p>Teddy Daniels</p>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-photo" style="background-image: url('https://media.themoviedb.org/t/p/w138_and_h175_face/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg')"></div>
+                    <h3>Mark Ruffalo</h3>
+                    <p>Chuck Aule</p>
+                </div>
+            </div>
+        </div>*@
+    </div>
+</div>
+
+
+@code {
+    private static Models.Movie _movieDetails = new();
+    
+    [Parameter]
+    public int MovieId { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        _movieDetails = await MoviesDBContext.GetMovieByIDAsync(MovieId);
+    }
+}

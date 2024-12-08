@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LUMI.andovy8h7e.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LUMI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LUMI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.LUMI.props",
+      "PackagePath": "build\\LUMI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LUMI.props",
+      "PackagePath": "buildMultiTargeting\\LUMI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.LUMI.props",
+      "PackagePath": "buildTransitive\\LUMI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
