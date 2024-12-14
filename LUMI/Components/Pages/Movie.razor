@@ -1,5 +1,10 @@
 @page "/movie/id={MovieID:int}"
 @using LUMI.DataAccess.Movies
+@using LUMI.Models
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<title>@_movieDetails.Title</title>
 
 @*<header class="top-bar">
     <div class="search-bar">
@@ -16,7 +21,7 @@
                 <div class="movie-tags">
                     @if (_movieDetails.Tags?.Count != 0 && _movieDetails.Tags != null) {
                         @foreach (var tag in _movieDetails.Tags) {
-                            <span class="tag">@tag</span>
+                            <span class="tag">@tag.Trim()</span>
                         }
                     }
                 </div>
@@ -38,9 +43,15 @@
                     @_movieDetails.Description
                 </p>
                 <div class="movie-actions">
-                    <button class="btn btn-primary" onclick="window.open('@_movieDetails.DownloadLink', '_blank').focus();">
-                        <i class="icon-download"></i>Скачать
+                    <button @onclick="ScrollToMovie" class="btn btn-primary">
+                        <i class="icon-play"></i>Дивитись
                     </button>
+                    @if (!string.IsNullOrEmpty(_movieDetails.DownloadLink)) {
+                        <button class="btn btn-icon" onclick="window.open('@_movieDetails.DownloadLink', '_blank').focus();">
+                            <i class="icon-download"></i>Завантажити
+                        </button>   
+                    }
+                    
                 </div>
             </div>
         </div>
@@ -48,41 +59,97 @@
 
     <div class="movie-content">
         <div class="cast-section">
-            <h2>Изображения</h2>
+            <h2 class="comments-title">Зображення</h2>
             <div class="media-row">
                 @if (_movieDetails.Media?.Count != 0 && _movieDetails.Media != null) {
                     @foreach (var media in _movieDetails.Media) {
                         <img src="@media" draggable="false"/>
-                    }   
+                    }
                 }
             </div>
         </div>
-        @*<div class="cast-section">
-            <h2>Movie cast</h2>
-            <div class="cast-grid">
-                <div class="cast-card">
-                    <div class="cast-photo" style="background-image: url('https://media.themoviedb.org/t/p/w138_and_h175_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg')"></div>
-                    <h3>Leonardo DiCaprio</h3>
-                    <p>Teddy Daniels</p>
-                </div>
-                <div class="cast-card">
-                    <div class="cast-photo" style="background-image: url('https://media.themoviedb.org/t/p/w138_and_h175_face/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg')"></div>
-                    <h3>Mark Ruffalo</h3>
-                    <p>Chuck Aule</p>
-                </div>
+        
+        <div id="watch_movie" 
+            style="width: 100%; height: fit-content; display: flex; justify-content: center; padding-top: 40px; padding-bottom: 40px">
+            <div class="kinobox_player" style="width: 60%"></div>
+        </div>
+        <script src="https://kinobox.tv/kinobox.min.js"></script>
+        <script src="js/kinoboxPlayer.js"></script>
+
+        <div class="cast-section">
+            <h2 class="comments-title">Коментарі</h2>
+            <div class="comment-input">
+                <textarea placeholder="Ім'я..." @bind="_username" 
+                class="input-field" style="max-width: 200px;" maxlength="50"></textarea>
+                <textarea placeholder="Напишіть щось... (максимум 255 символів)" 
+                @bind="_comment" class="input-field" maxlength="255"></textarea>
+                <button class="btn btn-primary" @onclick="AddComment">Додати коментар</button>
+
             </div>
-        </div>*@
+            @foreach (var comment in _comments.OrderByDescending(_comment => _comment.DatePosted)) {
+                <div class="comment" style="margin-top: 30px">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/360/247/non_2x/default-avatar-photo-icon-social-media-profile-sign-symbol-vector.jpg"
+                         draggable="false"
+                         class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">@comment.Username</span>
+                            <span class="comment-date">@comment.DatePosted.ToString("dd.MM.yyyy HH:mm")</span>
+                        </div>
+                        <p class="comment-text">
+                            @comment.Text
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
 
 
 @code {
-    private static Models.Movie _movieDetails = new();
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; } = default!;
     
     [Parameter]
     public int MovieId { get; set; }
+    
+    //comment
+    private string _username = string.Empty;
+    private string _comment = string.Empty;
+
+    private static List<Comment> _comments = new();
+    private static Models.Movie _movieDetails = new();
+    
 
     protected override async Task OnInitializedAsync() {
         _movieDetails = await MoviesDBContext.GetMovieByIDAsync(MovieId);
+        _comments = await MoviesDBContext.GetCommentsToMovieAsync(MovieId);
+    }
+    
+    protected async Task AddComment() {
+        var model = new Models.Comment() {
+            MovieID = _movieDetails.ID,
+            Username = _username,
+            Text = _comment,
+            DatePosted = DateTime.Now
+        };
+        if (!string.IsNullOrEmpty(model.Username) && !string.IsNullOrEmpty(model.Text)) {
+            await MoviesDBContext.AddCommentToMovieAsync(model);
+            _comments.Add(model);
+            _comment = string.Empty;
+            _username = string.Empty;   
+        }
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if (firstRender) {
+            await JSRuntime.InvokeVoidAsync("initializeKinoboxPlayer", _movieDetails.TmdbID);
+        }
+    }
+    
+    private async Task ScrollToMovie()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToId", "watch_movie");
     }
 }

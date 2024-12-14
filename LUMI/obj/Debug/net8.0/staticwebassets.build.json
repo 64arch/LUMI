@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AGVLCCTawr1gg90mH1d8YEbmOFcZSV2e7qT4I6WuL64=",
+  "Hash": "7TPs1m/O0c+K8q4FirAaAL+1fguGQ4Y8eCrhYX8DSag=",
   "Source": "LUMI",
   "BasePath": "_content/LUMI",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "andovy8h7e",
-      "Integrity": "6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=",
+      "Fingerprint": "wfzz6xdzkz",
+      "Integrity": "1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "andovy8h7e",
-      "Integrity": "6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=",
+      "Fingerprint": "wfzz6xdzkz",
+      "Integrity": "1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ddpp5ktu4k",
-      "Integrity": "T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ=",
+      "Fingerprint": "seeo74ykot",
+      "Integrity": "DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\js\\kinoboxPlayer.js",
+      "SourceId": "LUMI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\",
+      "BasePath": "_content/LUMI",
+      "RelativePath": "js/kinoboxPlayer#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "86jr6wyxq8",
+      "Integrity": "MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8=",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\kinoboxPlayer.js"
     }
   ],
   "Endpoints": [
@@ -113,7 +134,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2367"
+          "Value": "2876"
         },
         {
           "Name": "Content-Type",
@@ -121,11 +142,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ=\""
+          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -135,12 +156,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ="
+          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
         }
       ]
     },
     {
-      "Route": "app.ddpp5ktu4k.css",
+      "Route": "app.seeo74ykot.css",
       "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -150,7 +171,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2367"
+          "Value": "2876"
         },
         {
           "Name": "Content-Type",
@@ -158,11 +179,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ=\""
+          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -172,7 +193,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ddpp5ktu4k"
+          "Value": "seeo74ykot"
         },
         {
           "Name": "label",
@@ -180,7 +201,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ="
+          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
         }
       ]
     },
@@ -267,8 +288,8 @@
       ]
     },
     {
-      "Route": "LUMI.andovy8h7e.bundle.scp.css",
-      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
+      "Route": "js/kinoboxPlayer.86jr6wyxq8.js",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\js\\kinoboxPlayer.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -277,19 +298,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26223"
+          "Value": "641"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/javascript"
         },
         {
           "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
+          "Value": "\"MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sat, 14 Dec 2024 11:13:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -299,21 +320,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "andovy8h7e"
+          "Value": "86jr6wyxq8"
         },
         {
           "Name": "label",
-          "Value": "LUMI.bundle.scp.css"
+          "Value": "js/kinoboxPlayer.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
+          "Value": "sha256-MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8="
         }
       ]
     },
     {
-      "Route": "LUMI.andovy8h7e.styles.css",
-      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css",
+      "Route": "js/kinoboxPlayer.js",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\js\\kinoboxPlayer.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -322,37 +343,29 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26223"
+          "Value": "641"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/javascript"
         },
         {
           "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
+          "Value": "\"MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sat, 14 Dec 2024 11:13:35 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "andovy8h7e"
-        },
-        {
-          "Name": "label",
-          "Value": "LUMI.styles.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
+          "Value": "sha256-MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8="
         }
       ]
     },
@@ -367,7 +380,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26223"
+          "Value": "32552"
         },
         {
           "Name": "Content-Type",
@@ -375,11 +388,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -389,7 +402,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
         }
       ]
     },
@@ -404,7 +417,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26223"
+          "Value": "32552"
         },
         {
           "Name": "Content-Type",
@@ -412,11 +425,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -426,7 +439,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+        }
+      ]
+    },
+    {
+      "Route": "LUMI.wfzz6xdzkz.bundle.scp.css",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wfzz6xdzkz"
+        },
+        {
+          "Name": "label",
+          "Value": "LUMI.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+        }
+      ]
+    },
+    {
+      "Route": "LUMI.wfzz6xdzkz.styles.css",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wfzz6xdzkz"
+        },
+        {
+          "Name": "label",
+          "Value": "LUMI.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
         }
       ]
     }

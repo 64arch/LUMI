@@ -1,0 +1,150 @@
+.admin-profile {
+    padding: 2rem;
+    background-color: var(--sidebar-bg);
+    border-radius: var(--border-radius);
+    font-family: "Roboto", sans-serif;
+}
+
+.profile-info {
+    margin-bottom: 2rem;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.admin-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.admin-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-info p {
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.add-movie, .admin-actions {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.add-movie h2, .admin-actions h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-movie-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.form-group textarea {
+    font-family: "Roboto", sans-serif;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+}
+
+.btn-icon {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+input:focus {
+    outline: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

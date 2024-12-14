@@ -54,6 +54,7 @@ public class MoviesDBContext {
             if (await rdr.ReadAsync()) {
                 return new Movie {
                     ID = rdr.GetInt32(rdr.GetOrdinal("id")),
+                    TmdbID = rdr.GetString(rdr.GetOrdinal("tmdb_id")),
                     Poster = rdr.GetString(rdr.GetOrdinal("poster")),
                     LargePoster = rdr.GetString(rdr.GetOrdinal("large_poster")),
                     Title = rdr.GetString(rdr.GetOrdinal("title")),
@@ -89,61 +90,62 @@ public class MoviesDBContext {
 
         try {
             await DBController.OpenConnectionAsync();
-            
+
             string checkQuery = "SELECT COUNT(*) FROM `movies` WHERE `title` = @Title;";
             using var checkCmd = new MySqlCommand(checkQuery, connection);
             checkCmd.Parameters.AddWithValue("@Title", movie.Title);
             var exists = Convert.ToInt32(await checkCmd.ExecuteScalarAsync()) > 0;
 
-            if (exists)
-            {
+            if (exists) {
                 Console.WriteLine("Movie already exists in the database.");
                 return;
             }
-            
+
             string query = @"
-            INSERT IGNORE INTO `movies` (
-                `poster`, 
-                `large_poster`, 
-                `title`, 
-                `tags`, 
-                `description`, 
-                `release_date`, 
-                `rating`, 
-                `media`, 
-                `duration`, 
-                `download_link`, 
-                `created_at`
-            ) 
-            VALUES (
-                @Poster, 
-                @LargePoster, 
-                @Title, 
-                @Tags, 
-                @Description, 
-                @ReleaseDate, 
-                @Rating, 
-                @Media, 
-                @Duration, 
-                @DownloadLink, 
-                @CreatedAt
-            );";
+        INSERT INTO `movies` (
+               `tmdb_id`,
+               `poster`, 
+               `large_poster`, 
+               `title`, 
+               `tags`, 
+               `description`, 
+               `release_date`, 
+               `rating`, 
+               `media`, 
+               `duration`, 
+               `download_link`, 
+               `created_at`
+        ) 
+        VALUES (
+               @TmdbID,
+               @Poster, 
+               @LargePoster, 
+               @Title, 
+               @Tags, 
+               @Description, 
+               @ReleaseDate, 
+               @Rating, 
+               @Media, 
+               @Duration, 
+               @DownloadLink, 
+               @CreatedAt
+        );";
 
             using var cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@TmdbID", movie.TmdbID);
             cmd.Parameters.AddWithValue("@Poster", movie.Poster);
             cmd.Parameters.AddWithValue("@LargePoster", movie.LargePoster);
             cmd.Parameters.AddWithValue("@Title", movie.Title);
             cmd.Parameters.AddWithValue("@Tags", string.Join(",", movie.Tags));
             cmd.Parameters.AddWithValue("@Description", movie.Description);
-            cmd.Parameters.AddWithValue("@ReleaseDate", movie.CreatedAt); // Assuming ReleaseDate is mapped to CreatedAt
+            cmd.Parameters.AddWithValue("@ReleaseDate", movie.ReleaseDate); // Corrected to ReleaseDate
             cmd.Parameters.AddWithValue("@Rating", movie.Rating);
             cmd.Parameters.AddWithValue("@Media", string.Join(",", movie.Media));
             cmd.Parameters.AddWithValue("@Duration", movie.Duration);
-            cmd.Parameters.AddWithValue("@DownloadLink", movie.DownloadLink);
+            cmd.Parameters.AddWithValue("@DownloadLink", movie.DownloadLink ?? string.Empty);
             cmd.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
 
             await cmd.ExecuteNonQueryAsync();
-            Console.WriteLine("Movie added successfully.");
         }
         catch (Exception ex) {
             Console.WriteLine($"Error while adding movie: {ex.Message}");
@@ -151,5 +153,62 @@ public class MoviesDBContext {
         finally {
             await DBController.CloseConnectionAsync();
         }
+    }
+
+    public static async Task AddCommentToMovieAsync(Comment comment) {
+        var connection = DBController.GetConnection();
+
+        try {
+            await DBController.OpenConnectionAsync();
+            
+            string query = @"
+            INSERT INTO `comments` (`movie_id`,`user_name`,`comment`,`date_posted`) 
+            VALUES (@MovieId,@Username,@Comment,@DatePosted);";
+
+            using var cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@MovieId", comment.MovieID);
+            cmd.Parameters.AddWithValue("@Username",  comment.Username);
+            cmd.Parameters.AddWithValue("@Comment",  comment.Text);
+            cmd.Parameters.AddWithValue("@DatePosted", comment.DatePosted);
+
+            await cmd.ExecuteNonQueryAsync();
+        }
+        catch (Exception ex) {
+            Console.WriteLine($"Error while adding comment: {ex.Message}");
+        }
+        finally {
+            await DBController.CloseConnectionAsync();
+        }
+    }
+    
+    public static async Task<List<Comment>> GetCommentsToMovieAsync(int movieID) {
+        var connection = DBController.GetConnection();
+        var commetns = new List<Comment>();
+        try {
+            await DBController.OpenConnectionAsync();
+            
+            string query = "SELECT * FROM `comments` WHERE `movie_id` = @MovieId";
+
+            using var cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@MovieId", movieID);
+
+            await using var rdr = await cmd.ExecuteReaderAsync();
+            while (await rdr.ReadAsync()) {
+                commetns.Add(new Comment() {
+                    MovieID = rdr.GetInt32(rdr.GetOrdinal("movie_id")),
+                    Username = rdr.GetString(rdr.GetOrdinal("user_name")),
+                    Text = rdr.GetString(rdr.GetOrdinal("comment")),
+                    DatePosted = rdr.GetDateTime(rdr.GetOrdinal("date_posted"))
+                });
+            }
+        }
+        catch (Exception ex) {
+            Console.WriteLine($"Error while parsing comments: {ex.Message}");
+        }
+        finally {
+            await DBController.CloseConnectionAsync();
+        }
+
+        return commetns;
     }
 }

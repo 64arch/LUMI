@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-dd0dq3p8lm
 
+[D:/C\# projects/LUMI/LUMI/Components/Pages/Admin.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-dcv2req6dj
+
 [D:/C\# projects/LUMI/LUMI/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-cqidssk7fd
@@ -51,3 +55,7 @@ build_metadata.AdditionalFiles.CssScope = b-yd2ymjh13r
 [D:/C\# projects/LUMI/LUMI/Components/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-xp6g1jw3hp
+
+[D:/C\# projects/LUMI/LUMI/Components/Pages/Toast.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUb2FzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ao2n0aq1ut

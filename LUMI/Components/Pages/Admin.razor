@@ -1,0 +1,103 @@
+@page "/admin"
+@using LUMI.DataAccess.Movies
+@rendermode InteractiveServer
+
+<Toast @ref="Toast.toast" />
+
+<title>Admin panel</title>
+
+<div class="admin-profile">
+    <section class="profile-info">
+        <h1>Admin Profile</h1>
+        <div class="profile-details">
+            <div class="admin-avatar"></div>
+            <div class="admin-info">
+                <h2>arcaneblaze</h2>
+                <p>Role: Super Admin</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-movie">
+        <h2>Add New Movie</h2>
+        <div class="add-movie-form">
+            <div class="form-group">
+                <label>Movie Tmdb Id</label>
+                <input type="text" id="movie-tmdb-id" @bind="newMovie.TmdbID" name="movie-tmdb-id" required>
+            </div>
+            <div class="form-group">
+                <label>Movie Poster Link</label>
+                <input type="text" id="movie-poster" @bind="newMovie.Poster" name="movie-poster" required>
+            </div>
+            <div class="form-group">
+                <label>Movie Large Poster Link</label>
+                <input type="text" id="movie-poster" @bind="newMovie.LargePoster" name="movie-poster" required>
+            </div>
+            <div class="form-group">
+                <label>Movie Title</label>
+                <input type="text" id="movie-title" @bind="newMovie.Title" name="movie-title" required>
+            </div>
+            <div class="form-group">
+                <label>Tags (comma separation)</label>
+                <input type="text" id="movie-title" @bind="tagsInput" name="movie-title" required>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="movie-description" @bind="newMovie.Description" name="movie-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Release Date</label>
+                <input type="date" id="movie-release-date" @bind="newMovie.ReleaseDate" name="movie-release-date" required>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" id="movie-title" @bind="newMovie.Rating" name="movie-title" required>
+            </div>
+            <div class="form-group">
+                <label>Media Links (comma separation)</label>
+                <textarea id="movie-media" @bind="mediaInput" name="movie-media" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Duration</label>
+                <input type="text" id="movie-title" @bind="newMovie.Duration" name="movie-title" required>
+            </div>
+            <div class="form-group">
+                <label>Download Link</label>
+                <input type="text" id="movie-title" @bind="newMovie.DownloadLink" name="movie-title">
+            </div>
+            <button class="btn btn-primary" @onclick="HandleFormSubmit">Add Movie</button>
+        </div>
+    </section>
+</div>
+
+
+@code{
+
+    private Models.Movie newMovie = new Models.Movie();
+    private string tagsInput = string.Empty;
+    private string mediaInput = string.Empty;
+
+    private async Task HandleFormSubmit() {
+        try {
+            newMovie.Tags = tagsInput.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(tag => tag.Trim())
+                .ToList();
+
+            newMovie.Media = mediaInput.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(url => url.Trim())
+                .ToList();
+            
+            await MoviesDBContext.AddMovieAsync(newMovie);
+            Toast.toast.ShowToast("Movie successfully added", "info");
+            ResetForm();
+        }
+        catch (Exception ex) {
+        }
+    }
+
+    private void ResetForm() {
+        newMovie = new Models.Movie();
+        tagsInput = string.Empty;
+        mediaInput = string.Empty;
+    }
+}

@@ -21,6 +21,11 @@
     color: var(--text-color);
 }
 
+.search-bar input:focus[b-cqidssk7fd] {
+    outline: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
 .search-bar i[b-cqidssk7fd] {
     position: absolute;
     left: 1rem;
@@ -52,11 +57,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
-    cursor: pointer;
     transition: all 0.2s ease;
-}
-.featured-content:hover[b-cqidssk7fd]{
-    transform: scale(1.01);
 }
 
 .featured-content[b-cqidssk7fd]::before {

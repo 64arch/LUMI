@@ -1,21 +1,22 @@
 @page "/"
 @using LUMI.DataAccess.Movies
+@rendermode InteractiveServer
 
+<title>LUMI - Головна</title>
 
 <header class="top-bar">
     <div class="search-bar">
-        <input type="text" placeholder="Поиск">
+        <input type="text" placeholder="Пошук">
         <i class="icon-search"></i>
     </div>
 </header>
 <section class="featured-content"
-         onclick="window.location.href = '/movie/id=@futuredMovie.ID'"
          style="background-image: url('@futuredMovie.LargePoster');">
     <div class="featured-info">
         <div class="featured-tags">
             @if (futuredMovie.Tags?.Count != 0 && futuredMovie.Tags != null) {
                 @foreach (var tag in futuredMovie.Tags) {
-                    <span class="tag">@tag</span>
+                    <span class="tag">@tag.Trim()</span>
                 }
             }
         </div>
@@ -23,11 +24,17 @@
         <p class="featured-description">
             @futuredMovie.Description
         </p>
+        <div class="featured-actions">
+            <div class="featured-actions">
+                <button onclick="window.location.href = '/movie/id=@futuredMovie.ID'"
+                        class="btn btn-icon"><i class="icon-play"></i> Дивитись</button>
+            </div>
+        </div>
     </div>
 </section>
 <section class="recommended">
-    <h2>Фильмы</h2>
-    <div class="movie-grid">
+    <h2>Фільми</h2>
+    <div class="movie-grid" style="margin-top: 20px">
         @if (movies.Count != 0) {
             @foreach (var movie in movies) {
                 <div class="movie-card">
@@ -35,7 +42,7 @@
                          style="background-image: url('@movie.Poster');"></div>
                     <div class="movie-info">
                         <div class="movie-tags">
-                            <span class="tag">@movie.Tags.FirstOrDefault()</span>
+                            <span class="tag">@movie.Tags.FirstOrDefault().Trim()</span>
                         </div>
                     </div>
                     <h3 class="movie-title">@movie.Title</h3>
@@ -43,7 +50,7 @@
             }   
         }
         else {
-            <h3 style="color: var(--hover-color);">Фильмы не найдены</h3>
+            <h3 style="color: var(--hover-color);">Фільми не знайдено</h3>
         }
     </div>
 </section>
@@ -52,13 +59,10 @@
 @code {
     List<Models.Movie?> movies = new ();
     Models.Movie? futuredMovie = new();
+    
     protected override async Task OnInitializedAsync() {
         try {
             movies = await MoviesDBContext.GetMoviesAsync();
-            /*movies = movies
-                .Where(x => x.Tags?.FirstOrDefault() != null && x.Tags.FirstOrDefault().Equals("Драма"))
-                .ToList();*/
-            /*var rnd = new Random().Next(0, movies.Count);*/
             futuredMovie = movies.OrderByDescending(movie => movie.Rating).FirstOrDefault();
         }
         catch (Exception e) {

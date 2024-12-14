@@ -3,51 +3,6 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "LUMI.andovy8h7e.styles.css",
-      "AssetFile": "LUMI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26223"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "andovy8h7e"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
-        },
-        {
-          "Name": "label",
-          "Value": "LUMI.styles.css"
-        }
-      ]
-    },
-    {
       "Route": "LUMI.styles.css",
       "AssetFile": "LUMI.styles.css",
       "Selectors": [],
@@ -62,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26223"
+          "Value": "32552"
         },
         {
           "Name": "Content-Type",
@@ -70,17 +25,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c=\""
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6p0greX4tpCqRhPYQUOvBs1d3f3q8lgw67oOkFTxN5c="
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+        }
+      ]
+    },
+    {
+      "Route": "LUMI.wfzz6xdzkz.styles.css",
+      "AssetFile": "LUMI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wfzz6xdzkz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+        },
+        {
+          "Name": "label",
+          "Value": "LUMI.styles.css"
         }
       ]
     },
@@ -99,7 +99,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2367"
+          "Value": "2876"
         },
         {
           "Name": "Content-Type",
@@ -107,22 +107,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ=\""
+          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ="
+          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
         }
       ]
     },
     {
-      "Route": "app.ddpp5ktu4k.css",
+      "Route": "app.seeo74ykot.css",
       "AssetFile": "app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -136,7 +136,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2367"
+          "Value": "2876"
         },
         {
           "Name": "Content-Type",
@@ -144,21 +144,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ=\""
+          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ddpp5ktu4k"
+          "Value": "seeo74ykot"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-T26ESmtNHtjAN+AJOpc0FeurLtVBVpQMBEIXMJLFWuQ="
+          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
         },
         {
           "Name": "label",
@@ -245,6 +245,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "js/kinoboxPlayer.86jr6wyxq8.js",
+      "AssetFile": "js/kinoboxPlayer.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 11:13:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "86jr6wyxq8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8="
+        },
+        {
+          "Name": "label",
+          "Value": "js/kinoboxPlayer.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/kinoboxPlayer.js",
+      "AssetFile": "js/kinoboxPlayer.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 11:13:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MMANgKQz+2XUCKyQ7Vdx4FwlJlSUcLDWKVt+yWVeLT8="
         }
       ]
     }

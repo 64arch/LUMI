@@ -3,6 +3,7 @@ namespace LUMI.Models;
 
 public class Movie {
     public int ID { get; set; }
+    public string TmdbID { get; set; }
     public string Poster { get; set; }
     public string LargePoster { get; set; }
     public string Title { get; set; }

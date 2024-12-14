@@ -11,7 +11,12 @@ public class DBController {
 
     public static async Task OpenConnectionAsync() {
         if(_mySqlConnection.State == ConnectionState.Closed)
-            await _mySqlConnection.OpenAsync();
+            try {
+                await _mySqlConnection.OpenAsync();
+            }
+            catch (Exception ex) {
+                Console.WriteLine("SQL Connection error");  
+            }
     }
     
     public static async Task CloseConnectionAsync() {

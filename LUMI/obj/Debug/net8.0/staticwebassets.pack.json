@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LUMI.andovy8h7e.bundle.scp.css"
+      "PackagePath": "staticwebassets\\LUMI.wfzz6xdzkz.bundle.scp.css"
     },
     {
       "Id": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\app.css",
@@ -11,6 +11,10 @@
     {
       "Id": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\js\\kinoboxPlayer.js",
+      "PackagePath": "staticwebassets\\js\\kinoboxPlayer.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LUMI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
