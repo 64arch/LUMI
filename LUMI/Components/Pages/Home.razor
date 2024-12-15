@@ -9,6 +9,9 @@
         <input type="text" placeholder="Пошук">
         <i class="icon-search"></i>
     </div>
+    <div class="user-actions">
+        <div class="user-avatar" onclick="window.location='/admin'"></div>
+    </div>
 </header>
 <section class="featured-content"
          style="background-image: url('@futuredMovie.LargePoster');">
@@ -57,13 +60,16 @@
 
 
 @code {
-    List<Models.Movie?> movies = new ();
-    Models.Movie? futuredMovie = new();
-    
+    public static List<LUMI.Models.Movie?> movies = new ();
+    LUMI.Models.Movie? futuredMovie = new();
+
     protected override async Task OnInitializedAsync() {
         try {
             movies = await MoviesDBContext.GetMoviesAsync();
-            futuredMovie = movies.OrderByDescending(movie => movie.Rating).FirstOrDefault();
+            futuredMovie = movies
+                .OrderByDescending(movie => movie.CreatedAt.ToShortDateString())
+                .ToList()
+                .FirstOrDefault();
         }
         catch (Exception e) {
             Console.WriteLine(e);

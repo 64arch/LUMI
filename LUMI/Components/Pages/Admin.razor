@@ -2,80 +2,91 @@
 @using LUMI.DataAccess.Movies
 @rendermode InteractiveServer
 
-<Toast @ref="Toast.toast" />
+<ToastComponent @ref="ToastComponent.toast" />
 
 <title>Admin panel</title>
 
-<div class="admin-profile">
-    <section class="profile-info">
-        <h1>Admin Profile</h1>
-        <div class="profile-details">
-            <div class="admin-avatar"></div>
-            <div class="admin-info">
-                <h2>arcaneblaze</h2>
-                <p>Role: Super Admin</p>
+@if (!logined) {
+    <AdminLoginComponent OnLogin="HandleLogin" />
+}
+else {
+    <div class="admin-profile">
+        <section class="profile-info">
+            <h1>Admin Profile</h1>
+            <div class="profile-details">
+                <div class="admin-avatar"></div>
+                <div class="admin-info">
+                    <p>Role: Super Admin</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="add-movie">
-        <h2>Add New Movie</h2>
-        <div class="add-movie-form">
-            <div class="form-group">
-                <label>Movie Tmdb Id</label>
-                <input type="text" id="movie-tmdb-id" @bind="newMovie.TmdbID" name="movie-tmdb-id" required>
+        <section class="add-movie">
+            <h2>Add New Movie</h2>
+            <div class="add-movie-form">
+                <div class="form-group">
+                    <label>Movie Tmdb Id</label>
+                    <input type="text" id="movie-tmdb-id" @bind="newMovie.TmdbID" name="movie-tmdb-id" required>
+                </div>
+                <div class="form-group">
+                    <label>Movie Poster Link</label>
+                    <input type="text" id="movie-poster" @bind="newMovie.Poster" name="movie-poster" required>
+                </div>
+                <div class="form-group">
+                    <label>Movie Large Poster Link</label>
+                    <input type="text" id="movie-poster" @bind="newMovie.LargePoster" name="movie-poster" required>
+                </div>
+                <div class="form-group">
+                    <label>Movie Title</label>
+                    <input type="text" id="movie-title" @bind="newMovie.Title" name="movie-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Tags (comma separation)</label>
+                    <input type="text" id="movie-title" @bind="tagsInput" name="movie-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="movie-description" @bind="newMovie.Description" name="movie-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Release Date</label>
+                    <input type="date" id="movie-release-date" @bind="newMovie.ReleaseDate" name="movie-release-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Rating</label>
+                    <input type="text" id="movie-title" @bind="newMovie.Rating" name="movie-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Media Links (comma separation)</label>
+                    <textarea id="movie-media" @bind="mediaInput" name="movie-media" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" id="movie-title" @bind="newMovie.Duration" name="movie-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Download Link</label>
+                    <input type="text" id="movie-title" @bind="newMovie.DownloadLink" name="movie-title">
+                </div>
+                <button class="btn btn-primary" @onclick="HandleFormSubmit">Add Movie</button>
             </div>
-            <div class="form-group">
-                <label>Movie Poster Link</label>
-                <input type="text" id="movie-poster" @bind="newMovie.Poster" name="movie-poster" required>
-            </div>
-            <div class="form-group">
-                <label>Movie Large Poster Link</label>
-                <input type="text" id="movie-poster" @bind="newMovie.LargePoster" name="movie-poster" required>
-            </div>
-            <div class="form-group">
-                <label>Movie Title</label>
-                <input type="text" id="movie-title" @bind="newMovie.Title" name="movie-title" required>
-            </div>
-            <div class="form-group">
-                <label>Tags (comma separation)</label>
-                <input type="text" id="movie-title" @bind="tagsInput" name="movie-title" required>
-            </div>
-            <div class="form-group">
-                <label>Description</label>
-                <textarea id="movie-description" @bind="newMovie.Description" name="movie-description" required></textarea>
-            </div>
-            <div class="form-group">
-                <label>Release Date</label>
-                <input type="date" id="movie-release-date" @bind="newMovie.ReleaseDate" name="movie-release-date" required>
-            </div>
-            <div class="form-group">
-                <label>Rating</label>
-                <input type="text" id="movie-title" @bind="newMovie.Rating" name="movie-title" required>
-            </div>
-            <div class="form-group">
-                <label>Media Links (comma separation)</label>
-                <textarea id="movie-media" @bind="mediaInput" name="movie-media" required></textarea>
-            </div>
-            <div class="form-group">
-                <label>Duration</label>
-                <input type="text" id="movie-title" @bind="newMovie.Duration" name="movie-title" required>
-            </div>
-            <div class="form-group">
-                <label>Download Link</label>
-                <input type="text" id="movie-title" @bind="newMovie.DownloadLink" name="movie-title">
-            </div>
-            <button class="btn btn-primary" @onclick="HandleFormSubmit">Add Movie</button>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
+}
 
 
 @code{
-
-    private Models.Movie newMovie = new Models.Movie();
+    private Models.Admin admin = new();
+    private Models.Movie newMovie = new();
     private string tagsInput = string.Empty;
     private string mediaInput = string.Empty;
+    
+    
+    private bool logined = false;
+    private async Task HandleLogin(bool isLoggedIn)
+    {
+        logined = isLoggedIn;
+    }
 
     private async Task HandleFormSubmit() {
         try {
@@ -88,7 +99,7 @@
                 .ToList();
             
             await MoviesDBContext.AddMovieAsync(newMovie);
-            Toast.toast.ShowToast("Movie successfully added", "info");
+            ToastComponent.toast.ShowToast("Movie successfully added", "info");
             ResetForm();
         }
         catch (Exception ex) {

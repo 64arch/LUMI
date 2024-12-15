@@ -1,0 +1,116 @@
+.cont-323[b-6v4uj9dwkw]{
+    display: flex;
+    justify-content: center;
+}
+
+.auth-container[b-6v4uj9dwkw] {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.auth-card[b-6v4uj9dwkw] {
+    background-color: var(--sidebar-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.auth-header[b-6v4uj9dwkw] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo[b-6v4uj9dwkw] {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo svg[b-6v4uj9dwkw] {
+    width: 32px;
+    height: 32px;
+    color: var(--bg-color);
+}
+
+.auth-title[b-6v4uj9dwkw] {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.auth-subtitle[b-6v4uj9dwkw] {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.form-group[b-6v4uj9dwkw] {
+    margin-bottom: 1.5rem;
+}
+
+.form-label[b-6v4uj9dwkw] {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.form-input[b-6v4uj9dwkw] {
+    width: 90%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding: 1rem 1rem 1rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.form-input:focus[b-6v4uj9dwkw] {
+    outline: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.form-input[b-6v4uj9dwkw]::placeholder {
+    color: var(--text-secondary);
+}
+
+.submit-btn[b-6v4uj9dwkw] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover[b-6v4uj9dwkw] {
+    transform: scale(1.05);
+}
+
+.auth-footer[b-6v4uj9dwkw] {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.auth-link[b-6v4uj9dwkw] {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+
+.auth-link:hover[b-6v4uj9dwkw] {
+    text-decoration: underline;
+}

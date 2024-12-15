@@ -1,11 +1,11 @@
-.toast-container[b-ao2n0aq1ut] {
+.toast-container[b-sca1ycts3e] {
     position: fixed;
     bottom: 10px;
     left: 10px;
     z-index: 1006;
 }
 
-.toast[b-ao2n0aq1ut] {
+.toast[b-sca1ycts3e] {
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -14,32 +14,32 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: var(--text-color);
     font-size: 13px;
-    animation: toast-rise-b-ao2n0aq1ut 0.3s ease-out forwards;
+    animation: toast-rise-b-sca1ycts3e 0.3s ease-out forwards;
 }
 
-.toast.info[b-ao2n0aq1ut] {
+.toast.info[b-sca1ycts3e] {
     background-color: var(--primary-color);
     color: var(--bg-color);
 }
 
-.toast.success[b-ao2n0aq1ut] {
+.toast.success[b-sca1ycts3e] {
     background-color: #1c9749;
 }
 
-.toast.error[b-ao2n0aq1ut] {
+.toast.error[b-sca1ycts3e] {
     background-color: #e11d48;
 }
 
-.close-btn[b-ao2n0aq1ut] {
+.close-btn[b-sca1ycts3e] {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--bg-color);
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
 }
 
-@keyframes toast-rise-b-ao2n0aq1ut {
+@keyframes toast-rise-b-sca1ycts3e {
     from {
         transform: translateY(20px);
         opacity: 0;

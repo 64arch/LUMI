@@ -6,12 +6,13 @@
 
 <title>@_movieDetails.Title</title>
 
-@*<header class="top-bar">
+<header class="top-bar">
     <div class="search-bar">
     </div>
     <div class="user-actions">
+        <div class="user-avatar" onclick="window.location='/admin'"></div>
     </div>
-</header>*@
+</header>
 
 <div class="movie-details">
     <div class="movie-hero" style="background-image: url('@_movieDetails.LargePoster')">
@@ -27,11 +28,13 @@
                 </div>
                 <h1>@_movieDetails.Title</h1>
                 <div class="movie-meta">
-                    <span>
+                    <span title="Дата виходу">
                         @_movieDetails.ReleaseDate.ToShortDateString().Replace(".", "/")
                     </span>
                     <span>•</span>
-                    <span>@_movieDetails.Duration</span>
+                    <span title="Тривалість">@_movieDetails.Duration</span>
+                    <span>•</span>
+                    <span title="Завантажено на сайт">@_movieDetails.CreatedAt.ToShortDateString().Replace(".", "/")</span>
                 </div>
                 <div class="movie-rating">
                     <div class="rating-circle">
@@ -119,7 +122,7 @@
     private string _comment = string.Empty;
 
     private static List<Comment> _comments = new();
-    private static Models.Movie _movieDetails = new();
+    private static LUMI.Models.Movie _movieDetails = new();
     
 
     protected override async Task OnInitializedAsync() {
@@ -128,7 +131,7 @@
     }
     
     protected async Task AddComment() {
-        var model = new Models.Comment() {
+        var model = new LUMI.Models.Comment() {
             MovieID = _movieDetails.ID,
             Username = _username,
             Text = _comment,

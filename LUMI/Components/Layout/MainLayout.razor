@@ -1,20 +1,31 @@
+@using LUMI.Components.Pages
+@using LUMI.DataAccess.Movies
 @inherits LayoutComponentBase
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
 <body class="header_body">
-    <div class="container">
-        <aside class="sidebar">
-            <div class="logo">
-                <span class="logo-prime">LUMI</span> Cinema
-            </div>
-            <nav class="main-nav">
-                <a href="/" class="nav-item"><i class="icon-home"></i>Головна</a>
-            </nav>
-        </aside>
-        <main class="main-content">
-            @Body
-        </main>
-    </div>
+<div class="container">
+    <aside class="sidebar">
+        <img src="favicon.png" width="40" height="40" style="margin-bottom: 10px"/>
+        <div class="logo">
+            <span class="logo-prime">LUMI.</span>Cine
+        </div>
+        <nav class="main-nav">
+            <a href="/" class="nav-item">🏠 Головна</a>
+            @{
+                string randomMovieUrl = "#";
+                if (Home.movies.Any()) {
+                    randomMovieUrl = $"/movie/id={Home.movies[new Random().Next(0, Home.movies.Count)].ID}";
+                }
+            }
+            <a href="@randomMovieUrl"
+               class="nav-item">✨ Здивуй мене</a>
+        </nav>
+    </aside>
+    <main class="main-content">
+        @Body
+    </main>
+</div>
 </body>

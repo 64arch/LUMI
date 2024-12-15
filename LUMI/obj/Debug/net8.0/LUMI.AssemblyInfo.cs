@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LUMI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65e7150e740e1888fe86df6af65ac6d75594a34c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+713a144209442c05ffd5269265c096503d71332f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LUMI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LUMI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

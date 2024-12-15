@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7TPs1m/O0c+K8q4FirAaAL+1fguGQ4Y8eCrhYX8DSag=",
+  "Hash": "WXnDpjAAeK9mk5/BkUXyN2nI7mpTCbBkg6QpU1Owm6Q=",
   "Source": "LUMI",
   "BasePath": "_content/LUMI",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "wfzz6xdzkz",
-      "Integrity": "1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=",
+      "Fingerprint": "eqss90d0am",
+      "Integrity": "igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "wfzz6xdzkz",
-      "Integrity": "1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=",
+      "Fingerprint": "eqss90d0am",
+      "Integrity": "igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "seeo74ykot",
-      "Integrity": "DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=",
+      "Fingerprint": "lirj4rkncz",
+      "Integrity": "DeKwI4gkLlQcasjlVsvlCgYfAu/MqETvPFl3lX25uDI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "Fingerprint": "oe5thi2hyw",
+      "Integrity": "YKZVXsWbpnCCkK3N8rlCJ1t6EcWCVjk0xCgzNxfwo+M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
@@ -142,11 +142,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
+          "Value": "\"DeKwI4gkLlQcasjlVsvlCgYfAu/MqETvPFl3lX25uDI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
+          "Value": "Sat, 14 Dec 2024 18:26:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -156,12 +156,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
+          "Value": "sha256-DeKwI4gkLlQcasjlVsvlCgYfAu/MqETvPFl3lX25uDI="
         }
       ]
     },
     {
-      "Route": "app.seeo74ykot.css",
+      "Route": "app.lirj4rkncz.css",
       "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -179,11 +179,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI=\""
+          "Value": "\"DeKwI4gkLlQcasjlVsvlCgYfAu/MqETvPFl3lX25uDI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 07:45:36 GMT"
+          "Value": "Sat, 14 Dec 2024 18:26:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -193,7 +193,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "seeo74ykot"
+          "Value": "lirj4rkncz"
         },
         {
           "Name": "label",
@@ -201,12 +201,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DIpX0uvIhYTLBqCnDtRgYXTj44QAE/HhShtisY0h3tI="
+          "Value": "sha256-DeKwI4gkLlQcasjlVsvlCgYfAu/MqETvPFl3lX25uDI="
         }
       ]
     },
     {
-      "Route": "favicon.ifv42okdf2.png",
+      "Route": "favicon.oe5thi2hyw.png",
       "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
@@ -216,7 +216,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "1486"
         },
         {
           "Name": "Content-Type",
@@ -224,11 +224,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"YKZVXsWbpnCCkK3N8rlCJ1t6EcWCVjk0xCgzNxfwo+M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sun, 15 Dec 2024 14:25:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -238,7 +238,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ifv42okdf2"
+          "Value": "oe5thi2hyw"
         },
         {
           "Name": "label",
@@ -246,7 +246,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-YKZVXsWbpnCCkK3N8rlCJ1t6EcWCVjk0xCgzNxfwo+M="
         }
       ]
     },
@@ -261,7 +261,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "1486"
         },
         {
           "Name": "Content-Type",
@@ -269,11 +269,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"YKZVXsWbpnCCkK3N8rlCJ1t6EcWCVjk0xCgzNxfwo+M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 08 Dec 2024 18:54:06 GMT"
+          "Value": "Sun, 15 Dec 2024 14:25:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -283,7 +283,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-YKZVXsWbpnCCkK3N8rlCJ1t6EcWCVjk0xCgzNxfwo+M="
         }
       ]
     },
@@ -380,7 +380,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32552"
+          "Value": "34717"
         },
         {
           "Name": "Content-Type",
@@ -388,11 +388,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
+          "Value": "\"igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
+          "Value": "Sun, 15 Dec 2024 13:45:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -402,7 +402,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+          "Value": "sha256-igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU="
+        }
+      ]
+    },
+    {
+      "Route": "LUMI.eqss90d0am.bundle.scp.css",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Dec 2024 13:45:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eqss90d0am"
+        },
+        {
+          "Name": "label",
+          "Value": "LUMI.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU="
+        }
+      ]
+    },
+    {
+      "Route": "LUMI.eqss90d0am.styles.css",
+      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Dec 2024 13:45:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eqss90d0am"
+        },
+        {
+          "Name": "label",
+          "Value": "LUMI.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU="
         }
       ]
     },
@@ -417,7 +507,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32552"
+          "Value": "34717"
         },
         {
           "Name": "Content-Type",
@@ -425,11 +515,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
+          "Value": "\"igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
+          "Value": "Sun, 15 Dec 2024 13:45:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -439,97 +529,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
-        }
-      ]
-    },
-    {
-      "Route": "LUMI.wfzz6xdzkz.bundle.scp.css",
-      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LUMI.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "32552"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wfzz6xdzkz"
-        },
-        {
-          "Name": "label",
-          "Value": "LUMI.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
-        }
-      ]
-    },
-    {
-      "Route": "LUMI.wfzz6xdzkz.styles.css",
-      "AssetFile": "D:\\C# projects\\LUMI\\LUMI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LUMI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "32552"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 13:22:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wfzz6xdzkz"
-        },
-        {
-          "Name": "label",
-          "Value": "LUMI.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1OfmoGPGR12gzkDHJi/OOMK/cZXN+K8jhBZZpaZ4QvE="
+          "Value": "sha256-igZvuXFCwxTIr0jyGOh9J4xonC6MZMJERm57quJ0mIU="
         }
       ]
     }

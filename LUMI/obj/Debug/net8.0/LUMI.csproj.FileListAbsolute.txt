@@ -50,9 +50,8 @@ D:\C# projects\LUMI\LUMI\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
 D:\C# projects\LUMI\LUMI\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 D:\C# projects\LUMI\LUMI\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 D:\C# projects\LUMI\LUMI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
-D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\Login.razor.rz.scp.css
-D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\Register.razor.rz.scp.css
 D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\LUMI.sourcelink.json
 D:\C# projects\LUMI\LUMI\bin\Debug\net8.0\wwwroot\js\kinoboxPlayer.js
 D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\Admin.razor.rz.scp.css
-D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\Toast.razor.rz.scp.css
+D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\AdminLoginComponent.razor.rz.scp.css
+D:\C# projects\LUMI\LUMI\obj\Debug\net8.0\scopedcss\Components\Pages\ToastComponent.razor.rz.scp.css

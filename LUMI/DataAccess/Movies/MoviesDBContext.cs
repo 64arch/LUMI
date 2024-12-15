@@ -211,4 +211,27 @@ public class MoviesDBContext {
 
         return commetns;
     }
+
+    public static async Task<List<int>> GetMoviesId() {
+        var connection = DBController.GetConnection();
+        var ids = new List<int>();
+        try {
+            await DBController.OpenConnectionAsync();
+            
+            string query = "SELECT id FROM `movies`";
+            using var cmd = new MySqlCommand(query, connection);
+            await using var rdr = await cmd.ExecuteReaderAsync();
+            while (await rdr.ReadAsync()) {
+                ids.Add(rdr.GetInt32(rdr.GetOrdinal("id")));
+            }
+        }
+        catch (Exception ex) {
+            Console.WriteLine($"Error while fetching movie IDs: {ex.Message}");
+        }
+        finally {
+            await DBController.CloseConnectionAsync();
+        }
+
+        return ids;
+    }
 }
