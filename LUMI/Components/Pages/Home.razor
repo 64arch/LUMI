@@ -39,7 +39,7 @@
         <div class="featured-actions">
             <div class="featured-actions">
                 <button onclick="window.location.href = '/movie/@futuredMovie.ID'"
-                        class="btn btn-primary">
+                        class="btn btn-icon">
                     <span style="text-shadow: #1a1a1a 0px 0px 1px;">🎬</span> Дивитись
                 </button>
             </div>
@@ -48,6 +48,15 @@
 </section>
 <section class="recommended">
     <h2>Фільми</h2>
+    <div class="featured-actions">
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.All)" class="btn btn-secondary">Всі</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Drama)" class="btn btn-secondary">Драма</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Animation)" class="btn btn-secondary">Анімація</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Horror)" class="btn btn-secondary">Жахи</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Adventure)" class="btn btn-secondary">Пригоди</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Crime)" class="btn btn-secondary">Злочин</button>
+        <button @onclick="() => SortMoviesBy(SortMovieTypes.Thriller)" class="btn btn-secondary">Трилер</button>
+    </div>
     <div class="movie-grid" style="margin-top: 20px">
         @if (movies.Count != 0) {
             @foreach (var movie in movies) {
@@ -71,6 +80,17 @@
 
 
 @code {
+
+    enum SortMovieTypes {
+        All,
+        Drama,
+        Animation,
+        Horror,
+        Adventure,
+        Crime,
+        Thriller
+    }
+    
     private static List<LUMI.Models.Movie?> cachedMovies = new ();
     public static List<LUMI.Models.Movie?> movies = new ();
     LUMI.Models.Movie? futuredMovie = new();
@@ -104,4 +124,21 @@
             .ToList();
     }
 
+    private void SortMoviesBy(SortMovieTypes type) {
+        var tagMap = new Dictionary<SortMovieTypes, string> {
+            { SortMovieTypes.Drama, "Драма" },
+            { SortMovieTypes.Animation, "Анімація" },
+            { SortMovieTypes.Horror, "Жахи" },
+            { SortMovieTypes.Adventure, "Пригоди" },
+            { SortMovieTypes.Crime, "Злочин" },
+            { SortMovieTypes.Thriller, "Трилер" }
+        };
+        
+        if (type == SortMovieTypes.All) {
+            movies = cachedMovies;
+        }
+        else if (tagMap.ContainsKey(type)) {
+            movies = cachedMovies.Where(movie => movie.Tags.Any(tag => tag == tagMap[type])).ToList();
+        }
+    }
 }
