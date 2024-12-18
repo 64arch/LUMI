@@ -11,7 +11,7 @@
 }
 
 .search-bar input[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
@@ -92,8 +92,8 @@
     display: flex;
     flex-direction: row;
 }
-.btn:nth-child(2)[b-yd2ymjh13r]{
-    margin-left: 20px;
+.btn:not(:first-child)[b-yd2ymjh13r] {
+    margin-left: 10px;
 }
 
 .movie-info[b-yd2ymjh13r] {
@@ -207,7 +207,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     background-color: transparent;
     padding: 0.25rem 0.75rem;
@@ -222,8 +222,8 @@
 .btn[b-yd2ymjh13r] {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-family: var(--font-family);
+    font-size: 14.5px;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: var(--border-radius);
@@ -258,8 +258,8 @@
 
 /*Comments*/
 .comments-title[b-yd2ymjh13r] {
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-family: var(--font-family);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -304,14 +304,14 @@
 }
 
 .comment-text[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     line-height: 1.5;
     color: var(--text-color);
 }
 
 .comment-input[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     display: flex;
     gap: 0.5rem;
     align-items: flex-start;
@@ -319,7 +319,7 @@
 }
 
 .input-field[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     flex: 1;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -329,6 +329,7 @@
     font-size: 1rem;
     height: auto;
     resize: none;
+    transition: all 0.2s ease;
 }
 
 .input-field[b-yd2ymjh13r]::placeholder {

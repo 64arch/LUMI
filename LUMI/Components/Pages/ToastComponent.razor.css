@@ -1,11 +1,12 @@
 .toast-container {
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 1006;
 }
 
 .toast {
+    font-family: var(--font-family);;
     display: flex;
     align-items: center;
     padding: 10px 15px;

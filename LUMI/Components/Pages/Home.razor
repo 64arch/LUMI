@@ -1,36 +1,47 @@
 @page "/"
+@using LUMI.DataAccess
 @using LUMI.DataAccess.Movies
 @rendermode InteractiveServer
+
+<ToastComponent @ref="ToastComponent.toast" />
 
 <title>LUMI - Головна</title>
 
 <header class="top-bar">
     <div class="search-bar">
-        <input type="text" placeholder="Пошук">
+        <input type="text" placeholder="Пошук" @bind="searchQuery" @bind:after="OnSearchChanged" minlength="3">
         <i class="icon-search"></i>
     </div>
     <div class="user-actions">
-        <div class="user-avatar" onclick="window.location='/admin'"></div>
+        <div class="user-avatar" onclick="window.location='/admin'">
+        </div>
     </div>
 </header>
 <section class="featured-content"
          style="background-image: url('@futuredMovie.LargePoster');">
     <div class="featured-info">
         <div class="featured-tags">
+            <span class="tag" style="background-color: var(--primary-color); color: var(--bg-color)">
+                Новинка на сайті
+            </span>
             @if (futuredMovie.Tags?.Count != 0 && futuredMovie.Tags != null) {
                 @foreach (var tag in futuredMovie.Tags) {
                     <span class="tag">@tag.Trim()</span>
                 }
             }
         </div>
-        <h1 class="featured-title">@futuredMovie.Title</h1>
+        <h1 class="featured-title">
+            @futuredMovie.Title
+        </h1>
         <p class="featured-description">
             @futuredMovie.Description
         </p>
         <div class="featured-actions">
             <div class="featured-actions">
-                <button onclick="window.location.href = '/movie/id=@futuredMovie.ID'"
-                        class="btn btn-icon"><i class="icon-play"></i> Дивитись</button>
+                <button onclick="window.location.href = '/movie/@futuredMovie.ID'"
+                        class="btn btn-primary">
+                    <span style="text-shadow: #1a1a1a 0px 0px 1px;">🎬</span> Дивитись
+                </button>
             </div>
         </div>
     </div>
@@ -41,7 +52,7 @@
         @if (movies.Count != 0) {
             @foreach (var movie in movies) {
                 <div class="movie-card">
-                    <div class="movie-thumbnail" onclick="window.location = '/movie/id=@movie.ID'"
+                    <div class="movie-thumbnail" onclick="window.location = '/movie/@movie.ID'"
                          style="background-image: url('@movie.Poster');"></div>
                     <div class="movie-info">
                         <div class="movie-tags">
@@ -60,19 +71,37 @@
 
 
 @code {
+    private static List<LUMI.Models.Movie?> cachedMovies = new ();
     public static List<LUMI.Models.Movie?> movies = new ();
     LUMI.Models.Movie? futuredMovie = new();
-
+    private string searchQuery = string.Empty;
+    
+    //fix object = null after start host. its look like empty movies list.
+    
     protected override async Task OnInitializedAsync() {
         try {
-            movies = await MoviesDBContext.GetMoviesAsync();
-            futuredMovie = movies
-                .OrderByDescending(movie => movie.CreatedAt.ToShortDateString())
-                .ToList()
-                .FirstOrDefault();
+            cachedMovies = await MoviesDBContext.GetMoviesAsync();
+            futuredMovie = cachedMovies.LastOrDefault();
+            movies = cachedMovies;
         }
         catch (Exception e) {
-            Console.WriteLine(e);
+            Console.WriteLine(e.Message);
         }
     }
+    
+    private void OnSearchChanged() {
+        if (searchQuery.Length >= 3 && !string.IsNullOrWhiteSpace(searchQuery)) {
+            PerformSearch();
+        } else {
+            ToastComponent.toast.ShowToast("Error: Minimum length 3","error");
+            movies = cachedMovies;
+        }
+    }
+
+    private void PerformSearch() {
+        movies = cachedMovies
+            .Where(movie => movie.Title.ToLower().Contains(searchQuery.ToLower()))
+            .ToList();
+    }
+
 }

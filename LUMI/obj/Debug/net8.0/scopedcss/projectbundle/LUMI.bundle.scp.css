@@ -7,7 +7,7 @@
 }
 
 body[b-dd0dq3p8lm] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -85,7 +85,6 @@ body[b-dd0dq3p8lm] {
     background-color: currentColor;
     mask-size: cover;
 }
-.icon-home[b-dd0dq3p8lm] { mask-image: url(''); }
 .icon-explore[b-dd0dq3p8lm] { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'); }
 .icon-favorites[b-dd0dq3p8lm] { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 12a4.5 4.5 0 010 6.364l7.682 7.682a4.5 4.5 0 006.364-6.364L12 12z" /></svg>'); }
 .icon-profile[b-dd0dq3p8lm] { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>'); }
@@ -100,7 +99,7 @@ body[b-dd0dq3p8lm] {
     padding: 2rem;
     background-color: var(--sidebar-bg);
     border-radius: var(--border-radius);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
 }
 
 .profile-info[b-dcv2req6dj] {
@@ -169,11 +168,11 @@ body[b-dd0dq3p8lm] {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
 }
 
 .form-group textarea[b-dcv2req6dj] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     min-height: 100px;
     resize: vertical;
 }
@@ -187,7 +186,7 @@ body[b-dd0dq3p8lm] {
 .btn[b-dcv2req6dj] {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-size: 14px;
     padding: 0.5rem 1rem;
     border: none;
@@ -312,7 +311,7 @@ textarea:focus[b-dcv2req6dj] {
 
 .form-input[b-6v4uj9dwkw] {
     width: 90%;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     padding: 1rem 1rem 1rem 1rem;
     border: none;
@@ -377,7 +376,7 @@ textarea:focus[b-dcv2req6dj] {
 }
 
 .search-bar input[b-cqidssk7fd] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
@@ -385,6 +384,7 @@ textarea:focus[b-dcv2req6dj] {
     border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--text-color);
+    transition: all 0.2s ease;
 }
 
 .search-bar input:focus[b-cqidssk7fd] {
@@ -453,7 +453,7 @@ textarea:focus[b-dcv2req6dj] {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     background-color: transparent;
     padding: 0.25rem 0.75rem;
@@ -466,6 +466,7 @@ textarea:focus[b-dcv2req6dj] {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .featured-description[b-cqidssk7fd] {
@@ -483,7 +484,7 @@ textarea:focus[b-dcv2req6dj] {
 .btn[b-cqidssk7fd] {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-size: 14px;
     padding: 0.5rem 1rem;
     border: none;
@@ -630,7 +631,7 @@ textarea:focus[b-dcv2req6dj] {
 }
 
 .search-bar input[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
@@ -711,8 +712,8 @@ textarea:focus[b-dcv2req6dj] {
     display: flex;
     flex-direction: row;
 }
-.btn:nth-child(2)[b-yd2ymjh13r]{
-    margin-left: 20px;
+.btn:not(:first-child)[b-yd2ymjh13r] {
+    margin-left: 10px;
 }
 
 .movie-info[b-yd2ymjh13r] {
@@ -826,7 +827,7 @@ textarea:focus[b-dcv2req6dj] {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     background-color: transparent;
     padding: 0.25rem 0.75rem;
@@ -841,8 +842,8 @@ textarea:focus[b-dcv2req6dj] {
 .btn[b-yd2ymjh13r] {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-family: var(--font-family);
+    font-size: 14.5px;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: var(--border-radius);
@@ -877,8 +878,8 @@ textarea:focus[b-dcv2req6dj] {
 
 /*Comments*/
 .comments-title[b-yd2ymjh13r] {
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-family: var(--font-family);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -923,14 +924,14 @@ textarea:focus[b-dcv2req6dj] {
 }
 
 .comment-text[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     line-height: 1.5;
     color: var(--text-color);
 }
 
 .comment-input[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     display: flex;
     gap: 0.5rem;
     align-items: flex-start;
@@ -938,7 +939,7 @@ textarea:focus[b-dcv2req6dj] {
 }
 
 .input-field[b-yd2ymjh13r] {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     flex: 1;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -948,6 +949,7 @@ textarea:focus[b-dcv2req6dj] {
     font-size: 1rem;
     height: auto;
     resize: none;
+    transition: all 0.2s ease;
 }
 
 .input-field[b-yd2ymjh13r]::placeholder {
@@ -984,11 +986,12 @@ textarea:focus[b-dcv2req6dj] {
 .toast-container[b-sca1ycts3e] {
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 1006;
 }
 
 .toast[b-sca1ycts3e] {
+    font-family: var(--font-family);;
     display: flex;
     align-items: center;
     padding: 10px 15px;

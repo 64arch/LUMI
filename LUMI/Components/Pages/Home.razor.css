@@ -11,7 +11,7 @@
 }
 
 .search-bar input {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
@@ -19,6 +19,7 @@
     border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--text-color);
+    transition: all 0.2s ease;
 }
 
 .search-bar input:focus {
@@ -87,7 +88,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     background-color: transparent;
     padding: 0.25rem 0.75rem;
@@ -100,6 +101,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .featured-description {
@@ -117,7 +119,7 @@
 .btn {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-size: 14px;
     padding: 0.5rem 1rem;
     border: none;

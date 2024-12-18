@@ -1,11 +1,12 @@
 .toast-container[b-sca1ycts3e] {
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 1006;
 }
 
 .toast[b-sca1ycts3e] {
+    font-family: var(--font-family);;
     display: flex;
     align-items: center;
     padding: 10px 15px;

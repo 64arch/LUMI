@@ -30,6 +30,7 @@ public class MoviesDBContext {
                     CreatedAt = rdr.GetDateTime(rdr.GetOrdinal("created_at"))
                 });
             }
+
         }
         catch (Exception ex) {
             Console.WriteLine($"Error: {ex}");
@@ -37,8 +38,8 @@ public class MoviesDBContext {
         finally {
             await DBController.CloseConnectionAsync();
         }
-        
-        return movies;
+
+        return movies;   
     }
     
     public static async Task<Movie> GetMovieByIDAsync(int movieID) {
@@ -87,7 +88,6 @@ public class MoviesDBContext {
 
     public static async Task AddMovieAsync(Movie movie) {
         var connection = DBController.GetConnection();
-
         try {
             await DBController.OpenConnectionAsync();
 

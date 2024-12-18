@@ -63,7 +63,7 @@
 
 .form-input[b-6v4uj9dwkw] {
     width: 90%;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 500;
     padding: 1rem 1rem 1rem 1rem;
     border: none;
